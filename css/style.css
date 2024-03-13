@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: rgb(246,93,93) no-repeat;
+    background: linear-gradient(13deg, rgba(246,93,93,1) 0%, rgba(249,181,62,1) 100%) no-repeat;
+}
+.container{
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 16px 8px #0000003c;
+    background-color: #fff;
+}
+.container .score_card{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px ;
+}
+.container .score_card h2{
+    font-size: 18px;
+    background-color: #5622ff;
+    padding: 10px;
+    border-radius: 4px;
+}
+h2 span,.user-score{
+    color:#fff;
+}
+.computer-score{
+    color:#fff;
+}
+.game-screen{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 40px;
+    border-top:1px solid #8f8f8f;
+    padding: 10px 0;
+}
+.game-screen .you,.game-screen .computer,.game-screen .result{
+    font-size: 16px;
+    font-weight: 700;
+}
+.game-screen .you img{
+    max-width: 240px;
+}
+.game-screen .you.anim img{
+    max-width: 240px;
+    transform-origin: left center;
+    animation: you_shake 1s alternate infinite;
+}
+.game-screen .computer img{
+    max-width: 240px;
+}
+.game-screen .computer.anim img{
+    max-width: 240px;
+    transform-origin: left center;
+    animation: computer_shake 1s alternate infinite;
+}
+@keyframes you_shake {
+    0%{
+         transform: rotateZ(-20deg);
+    }
+    100%{
+         transform: rotateZ(20deg);
+    }
+}
+@keyframes computer_shake {
+    0%{
+         transform: rotateZ(-20deg) rotateY(180deg);
+    }
+    100%{
+         transform: rotateZ(20deg) rotateY(180deg);
+    }
+}
+.user-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+button{
+    border: none;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+button:before{
+    content:"";
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+button.rock{
+    background-color: #EF547F;
+    position: relative;
+}
+button.rock:before{
+    background: url("./../images/rock.png") no-repeat;
+    filter: invert(100%);
+    background-size: cover;
+}
+button.paper{
+    background-color: #FFDC55;
+    position: relative;
+}
+button.paper:before{
+    background: url("./../images/hand-paper.png") no-repeat;
+    filter: invert(100%);
+    background-size: cover;
+}
+button.scissor{
+    background-color: #73DBE1;
+    position: relative;
+}
+button.scissor:before{
+    background: url("./../images/scissors.png") no-repeat;
+    filter: invert(100%);
+    background-size: cover;
+}

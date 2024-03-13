@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock,Paper&scissors</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Rock, Paper & scissors</h1>
+    <div class="container">
+        <div class="score_card">
+            <h2 class="user-score"><label  for="">User Score: </label><span id="userScore">0</span></h2>
+            <h2 class="computer-score"><label  for="">Computer Score:</label><span id="computerScore">0</span></h2>
+        </div>
+        <div class="game-screen">
+            <span class="you anim">
+                <!-- Your choice: -->
+                <img id="your-choice-img" src="./images/shake.svg" alt="shake">
+                <span id="your-choice"></span>
+            </span>
+            <br/>
+            <span class="result">Result:<span id="result-choice">0</span></span>
+            <span id="computer" class="computer anim">
+                <!-- Computer choice: -->
+                <img id="computer-choice-img" src="./images/shake.svg" alt="shake">
+                <span id="computer-choice"></span>
+            </span>
+            <br/>
+        </div>
+        <div class="user-options">
+            <button class="rock" value="Rock" title="Rock"></button>
+            <button class="paper" value="Paper" title="Paper"></button>
+            <button class="scissor" value="Scissor" title="Scissor"></button>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
