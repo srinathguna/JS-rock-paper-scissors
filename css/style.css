@@ -42,41 +42,65 @@ h2 span,.user-score{
     margin-bottom: 40px;
     border-top:1px solid #8f8f8f;
     padding: 10px 0;
+    overflow: hidden;
 }
-.game-screen .you,.game-screen .computer,.game-screen .result{
+.game-screen .you,
+.game-screen .computer{
     font-size: 16px;
     font-weight: 700;
 }
+.game-screen .result{
+    font-size: 32px;
+    font-weight: 800;
+    color: #1bb32a;
+}
 .game-screen .you img{
-    max-width: 240px;
+    max-width: 200px;
+    transform: translateX(-200px);
+    transition: all 0.3s;
 }
-.game-screen .you.anim img{
-    max-width: 240px;
+.game-screen .you.hand img{
+    transform: translateX(0px);
+}
+.game-screen .you.hand.anim img{
+    max-width: 200px;
     transform-origin: left center;
-    animation: you_shake 1s alternate infinite;
-}
-.game-screen .computer img{
-    max-width: 240px;
-}
-.game-screen .computer.anim img{
-    max-width: 240px;
-    transform-origin: left center;
-    animation: computer_shake 1s alternate infinite;
+    animation: you_shake 0.5s alternate infinite ease-in-out;
 }
 @keyframes you_shake {
     0%{
          transform: rotateZ(-20deg);
     }
+    /* 50%{
+         transform: rotateZ(20deg);
+    }
+    75%{
+         transform: rotateZ(10deg);
+    } */
     100%{
          transform: rotateZ(20deg);
     }
 }
+
+.game-screen .computer img{
+    max-width: 200px;
+    transform: translateX(200px);
+    transition: all 0.3s;
+}
+.game-screen .computer.hand img{
+    transform: translateX(0px);
+}
+.game-screen .computer.hand.anim img{
+    max-width: 200px;
+    transform-origin: right center;
+    animation: computer_shake 0.5s alternate infinite ease-in-out;
+}
 @keyframes computer_shake {
     0%{
-         transform: rotateZ(-20deg) rotateY(180deg);
+         transform: rotateZ(20deg);
     }
     100%{
-         transform: rotateZ(20deg) rotateY(180deg);
+         transform: rotateZ(-20deg);
     }
 }
 .user-options{

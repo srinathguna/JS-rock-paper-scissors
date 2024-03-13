@@ -12,31 +12,56 @@ let computerChoice
 let result
 let userScore = 0;
 let computerScore = 0;
-let iconimg;
+let userIconimg;
+let computerIconimg;
 
-yourDisplay.innerHTML = "Hand shaking";
-computerDisplay.innerHTML = "Hand shaking";
-resultDisplay.innerHTML = "Result Loading";
-let computerr = document.getElementById("computer")
-const remove = () => {
-    computerr.classList.remove("anim");
+// yourDisplay.innerHTML = "Hand shaking";
+// computerDisplay.innerHTML = "Hand shaking";
+// resultDisplay.innerHTML = "Result Loading";
+let computer = document.getElementById("computer")
+let you = document.getElementById("you")
+const Add = () => {
+    you.classList.add("hand");
+    computer.classList.add("hand");
+    setTimeout(() => {        
+        you.classList.add("anim");
+        computer.classList.add("anim");
+    }, 1000)
+    
 }
+const Remove = () => {
+    setTimeout(() => {
+        you.classList.remove("anim");
+        computer.classList.remove("anim");
+    },3000)
+}
+
 buttons.forEach(possiblechoice => possiblechoice.addEventListener('click', (e) => {
+    Add()
+    Remove()
     setTimeout(() => {
         userChoice = e.target.value
         yourDisplay.innerHTML = userChoice;
-    },2000)
+        if (userChoice === "Rock") {
+            userIconimg = "./images/rock-left.svg"
+        }
+        if (userChoice === "Paper") {
+            userIconimg = "./images/paper-left.svg"
+        }
+        if (userChoice === "Scissor") {
+            userIconimg = "./images/scissor-left.svg"
+        }
+        yourImg.src = userIconimg
+    },3000)
     setTimeout(() => {
         computer_value()
-        result_value()
-        remove()
-    }, 2000)
+        result_value()       
+    }, 3000)
     setTimeout(() => {        
         userScores()
         computerScores()
-    },2000)
-    // computer_value()
-    // result_value()
+        
+    },3200)
 }))
 
 const computer_value = () => {
@@ -44,18 +69,18 @@ const computer_value = () => {
     console.log(randomChoice)
     if (randomChoice === 1) {
         computerChoice = "Rock";
-        iconimg = "./images/shake.svg";
+        computerIconimg = "./images/rock-right.svg";
     }
     if (randomChoice === 2) {
         computerChoice = "Paper";
-        iconimg = "./images/paper-svg.svg";
+        computerIconimg = "./images/paper-right.svg";
     }
     if (randomChoice === 3) {
         computerChoice = "Scissor";
-       iconimg = "./images/scissors-svg.svg";
+       computerIconimg = "./images/scissor-right.svg";
     }
     computerDisplay.innerHTML = computerChoice;
-    computerImg.src = iconimg;
+    computerImg.src = computerIconimg;
     
 }
 

@@ -10,23 +10,21 @@
     <h1 style="text-align: center;">Rock, Paper & scissors</h1>
     <div class="container">
         <div class="score_card">
-            <h2 class="user-score"><label  for="">User Score: </label><span id="userScore">0</span></h2>
+            <h2 class="user-score"><label  for="">Your Score: </label><span id="userScore">0</span></h2>
             <h2 class="computer-score"><label  for="">Computer Score:</label><span id="computerScore">0</span></h2>
         </div>
         <div class="game-screen">
-            <span class="you anim">
+            <span id="you" class="you">
                 <!-- Your choice: -->
-                <img id="your-choice-img" src="./images/shake.svg" alt="shake">
+                <img id="your-choice-img" src="./images/Rock-left.svg" alt="shake">
                 <span id="your-choice"></span>
             </span>
-            <br/>
-            <span class="result">Result:<span id="result-choice">0</span></span>
-            <span id="computer" class="computer anim">
+            <span class="result"><!--Result:--><span id="result-choice"></span></span>
+            <span id="computer" class="computer">
                 <!-- Computer choice: -->
-                <img id="computer-choice-img" src="./images/shake.svg" alt="shake">
                 <span id="computer-choice"></span>
+                <img id="computer-choice-img" src="./images/rock-right.svg" alt="shake">
             </span>
-            <br/>
         </div>
         <div class="user-options">
             <button class="rock" value="Rock" title="Rock"></button>
