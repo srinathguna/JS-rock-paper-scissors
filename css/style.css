@@ -119,6 +119,8 @@ h2 span,.user-score{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    border-top: 1px solid #00000066;
+    padding-top: 20px;
 }
 button{
     border: none;
