@@ -8,7 +8,13 @@ body{
     font-family: "Poppins", sans-serif;
     height: 100vh;
     background: rgb(246,93,93) no-repeat;
-    background: linear-gradient(13deg, rgba(246,93,93,1) 0%, rgba(249,181,62,1) 100%) no-repeat;
+    background: linear-gradient(13deg, rgba(246,93,93,1) 0%, rgba(249,181,62,1) 100%) no-repeat
+}
+.app-title{
+    text-align: center;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    margin: 20px;
 }
 .container{
     max-width: 60%;
@@ -25,9 +31,14 @@ body{
 }
 .container .score_card h2{
     font-size: 18px;
-    background-color: #5622ff;
     padding: 10px 30px;
     border-radius: 4px;
+}
+.container .score_card .user-score{
+    background-color: #582ee4;
+}
+.container .score_card .computer-score{
+    background-color: #f77b22;
 }
 h2 span,.user-score{
     color:#fff;
