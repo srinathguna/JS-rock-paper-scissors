@@ -59,8 +59,7 @@ buttons.forEach(possiblechoice => possiblechoice.addEventListener('click', (e) =
     }, 3000)
     setTimeout(() => {        
         userScores()
-        computerScores()
-        
+        computerScores()        
     },3200)
 }))
 
@@ -123,9 +122,9 @@ let computerScores = () => {
     computerScoreDisplay.innerHTML = computerScore
 }
 
-// if (userScore == 10) {
-//     console.log("You won the match")
-// }
-// if (computerScore == 10) {
-//     console.log("Computer won the match")
-// }
+if (userScore == 10) {
+    console.log("You won the match")
+}
+if (computerScore == 10) {
+    console.log("Co  mputer won the match")
+}
